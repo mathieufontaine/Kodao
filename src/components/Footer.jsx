@@ -9,19 +9,19 @@ const Footer = () => {
             <h4 className="col_heading">Kodao.io</h4>
             <ul>
               <li>
-                <a href="#">A propos</a>
+                <a href="/">A propos</a>
               </li>
               <li>
-                <a href="#">Nos services</a>
+                <a href="/">Nos services</a>
               </li>
               <li>
-                <a href="#">Mentions légales</a>
+                <a href="/">Mentions légales</a>
               </li>
               <li>
-                <a href="#">Gestion des cookies</a>
+                <a href="/">Gestion des cookies</a>
               </li>
               <li>
-                <a href="#">Données personnelles</a>
+                <a href="/">Données personnelles</a>
               </li>
             </ul>
           </div>
@@ -29,29 +29,29 @@ const Footer = () => {
             <h4 className="col_heading">News</h4>
             <ul>
               <li>
-                <a href="#">Collabs (à venir)</a>
+                <a href="/">Collabs (à venir)</a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="/">Blog</a>
               </li>
               <li>
-                <a href="#">Nouveaux services</a>
+                <a href="/">Nouveaux services</a>
               </li>
             </ul>
           </div>
           <div className="footer_col">
             <h4 className="col_heading">Nous suivre</h4>
             <div className="social-links">
-              <a href="#">
+              <a href="/">
                 <i className="fab fa-discord"></i>
               </a>
-              <a href="#">
+              <a href="/">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="/">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#">
+              <a href="/">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>

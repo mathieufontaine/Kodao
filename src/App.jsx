@@ -1,18 +1,31 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./style/App.css";
 import "./style/header.css";
+import "./style/button.css";
 import "./style/section.css";
+import "./style/card.css";
 import "./style/blog.css";
+import "./style/hero.css";
+import "./style/article.css";
 import "./style/footer.css";
-import Header from "./components/header/Header";
-import Blog from "./components/blog/Blog";
-import Footer from "./components/footer/Footer";
+import Header from "./components/Header";
+// import Home from "./components/Home";
+import Blog from "./components/Blog";
+import SinglePost from "./components/SinglePost";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Blog />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route element={<Blog />} path="/" />
+          <Route element={<SinglePost />} path="/blog/:slug" />
+          <Route element={<Blog />} path="/blog" />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

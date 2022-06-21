@@ -1,0 +1,67 @@
+/* articles */
+
+.card_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.card:hover {
+  box-shadow: 10px 10px 5px rgb(0 0 0);
+}
+
+.card:hover .card_text {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.card_img {
+  width: 100%;
+  height: 130px;
+}
+
+.card_title {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-bottom: 4px solid #a87bcb;
+}
+.card_text {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  height: 100%;
+  transition: 0.5s all ease;
+}
+
+.card_more {
+  color: grey;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.card_infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.card_date {
+}
+.card_author {
+  font-weight: 800;
+}
