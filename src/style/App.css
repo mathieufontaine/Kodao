@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: Poppins;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* transition: all 0.3s ease-in-out; */
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -10vh;
+  visibility: hidden;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+:root {
+  --primary-color: #fcfdfd;
+  --secondary-color: #d4d5d6;
+  --placeholder-color: #818181;
+  --bg-color: #000;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2.8rem;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+}
+
+p {
+  font-weight: 100;
+  font-size: 1.4rem;
+  line-height: 26px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.logo_link {
+  height: 8vh;
+  position: absolute;
+  left: 5%;
+}
