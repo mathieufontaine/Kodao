@@ -20,7 +20,8 @@ const Blog = () => {
          body, 
          excerpt,
          publishedAt,
-         "categories": categories[]->title
+         "categories": categories[]->title,
+         "authorName":author->name,
        }`
       )
       // .then(data => console.log(data))
@@ -49,7 +50,7 @@ const Blog = () => {
       </section>
       <section className="section section--white">
         <div className="container">
-          <h3 className="section_heading">Articles</h3>
+          {/* <h3 className="section_heading">Articles</h3> */}
           <div className="card_wrapper">
             {!isLoading &&
               postData?.map((post, index) => (
@@ -60,7 +61,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
-      <section className="section section--white">
+      {/* <section className="section section--white">
         <div className="container">
           <h3>Pourquoi le Web3 ?</h3>
           <p>
@@ -76,7 +77,7 @@ const Blog = () => {
             organisations et leur communautés.{" "}
           </p>
         </div>
-      </section>
+      </section> */}
       <Cta />
     </main>
   );

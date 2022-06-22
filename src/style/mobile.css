@@ -1,0 +1,21 @@
+@media (max-width: 900px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 8px;
+  }
+  .article_video {
+    width: 100%;
+    /* height: 250px; */
+  }
+  .hero_headings {
+    /* flex-direction: column;
+    align-items: flex-start; */
+    /* grid-gap: 20px; */
+    padding: 20px 5%;
+  }
+}

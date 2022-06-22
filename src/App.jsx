@@ -7,6 +7,7 @@ import "./style/card.css";
 import "./style/blog.css";
 import "./style/hero.css";
 import "./style/article.css";
+import "./style/mobile.css";
 import "./style/footer.css";
 import Header from "./components/Header";
 // import Home from "./components/Home";

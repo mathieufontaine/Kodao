@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
       <a
         className="logo_link"
-        href="http://"
+        href="/blog"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -57,7 +57,7 @@ const Header = () => {
             </a>
           </li>
           <li className="navbar_item">
-            <a href="/blog.html" className="navbar_link navbar_link--active">
+            <a href="/blog" className="navbar_link navbar_link--active">
               Blog
             </a>
           </li>

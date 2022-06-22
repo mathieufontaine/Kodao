@@ -8,6 +8,36 @@
  *    type: 'blockContent'
  *  }
  */
+import React from "react";
+import { FaPaperclip } from "react-icons/fa";
+import ExternalLinkRenderer from "./components/ExternalLinkRenderer";
+import getYoutubeId from "get-youtube-id";
+
+const highlightIcon = () => <span style={{ fontWeight: "bold" }}>H</span>;
+
+const highlightRender = props => (
+  <span style={{ backgroundColor: "#a87bcb" }}>{props.children}</span>
+);
+
+const YoutubePreview = ({ value }) => {
+  const id = getYoutubeId(value.url);
+  const url = `https://www.youtube.com/embed/${id}`;
+  if (!id) {
+    return <div>Missing Youtube URL</div>;
+  }
+  return (
+    <iframe
+      width="560"
+      height="315"
+      src={url}
+      title="YouTube Preview"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  );
+};
+
 export default {
   title: "Block Content",
   name: "blockContent",
@@ -40,19 +70,55 @@ export default {
         decorators: [
           { title: "Strong", value: "strong" },
           { title: "Emphasis", value: "em" },
-          { title: "Code", value: "code" }
+          { title: "Code", value: "code" },
+          { title: "Underline", value: "underline" },
+          { title: "Strike", value: "strike-through" },
+          {
+            title: "Highlight",
+            value: "highlight",
+            blockEditor: {
+              icon: highlightIcon,
+              render: highlightRender
+            }
+          }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: "URL",
             name: "link",
             type: "object",
+            title: "URL",
+            blockEditor: {
+              render: ExternalLinkRenderer
+            },
             fields: [
               {
                 title: "URL",
                 name: "href",
                 type: "url"
+              },
+              {
+                title: "Open in a new window",
+                name: "blank",
+                type: "boolean"
+              }
+            ]
+          },
+          {
+            name: "internalLink",
+            type: "object",
+            title: "Internal link",
+            blockEditor: {
+              icon: FaPaperclip
+            },
+            fields: [
+              {
+                name: "reference",
+                type: "reference",
+                to: [
+                  { type: "post" }
+                  // other types you may want to link to
+                ]
               }
             ]
           }
@@ -65,6 +131,24 @@ export default {
     {
       type: "image",
       options: { hotspot: true }
+    },
+    {
+      name: "youtube",
+      type: "object",
+      title: "youtube Embed",
+      fields: [
+        {
+          name: "url",
+          type: "url",
+          title: "URL"
+        }
+      ],
+      preview: {
+        select: {
+          url: "url"
+        },
+        component: YoutubePreview
+      }
     }
   ]
 };

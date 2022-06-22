@@ -1,3 +1,8 @@
+.article_content {
+  max-width: 1000px;
+  width: 100%;
+}
+
 .article_infos {
   display: flex;
   align-items: center;
@@ -7,6 +12,32 @@
   background: rgba(179, 179, 179, 0.1);
 }
 
-.author_img {
-  width: 100px;
+.article_h2 {
+  padding: 20px 0;
+  font-weight: 400;
+}
+.article_h3 {
+  padding: 20px 0;
+  font-weight: 300;
+}
+.article_h4 {
+  padding: 20px 0;
+  font-weight: 300;
+}
+.article_video {
+  display: block;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+.article ul,
+ol {
+  padding-left: 20px;
+}
+.article .container {
+  padding-top: 0;
+}
+
+.article_content {
+  padding-bottom: 30px;
 }
